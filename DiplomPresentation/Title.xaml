@@ -1,0 +1,42 @@
+﻿<Page x:Class="DiplomPresentation.Page1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="800"
+	Title="Page1">
+
+    <Grid>
+        <Border Name="Border" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
+                                Background="LightYellow" BorderBrush="Black" CornerRadius="25" Margin="5,5,5,5" Padding="0,5,0,0">
+            <Grid VerticalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="300" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                
+                <Image Source="/Images/titleFirstPage.JPG"  Grid.Row="0" Grid.ColumnSpan="2"/>
+                <TextBlock VerticalAlignment="Center" Grid.Row="0" Grid.ColumnSpan="2" TextWrapping="Wrap" TextAlignment="Center" Foreground="White" FontSize="40"> МОДУЛЬ ДЛЯ ХРАНЕНИЯ И СТАТИСТИЧЕСКОГО АНАЛИЗА РЕЗУЛЬТАТОВ ЗОНДОВЫХ ИЗМЕРЕНИЙ ЭЛЕКТРОФИЗИЧЕСКИХ И СВЧ ПАРАМЕТРОВ МИС</TextBlock>
+
+                <TextBlock VerticalAlignment="Center" Grid.Row="2" Grid.Column="1" TextWrapping="Wrap" TextAlignment="Left" Foreground="Gray" FontSize="30" >Выполнил</TextBlock>
+                <TextBlock VerticalAlignment="Center" Grid.Row="3" Grid.Column="1" TextWrapping="Wrap" TextAlignment="Left" Foreground="Gray" FontSize="30" Margin="0,0,10,0">студент каф. КСУП, ТУСУР</TextBlock>
+                <TextBlock VerticalAlignment="Center" Grid.Row="4" Grid.Column="1" TextWrapping="Wrap" TextAlignment="Left" Foreground="Gray" FontSize="30">Каратаев Е. П.</TextBlock>
+                <TextBlock VerticalAlignment="Center" Grid.Row="5" Grid.Column="1" TextWrapping="Wrap" TextAlignment="Left" Foreground="Gray" FontSize="30">Научный руководитель</TextBlock>
+                <TextBlock VerticalAlignment="Center" Grid.Row="6" Grid.Column="1" TextWrapping="Wrap" TextAlignment="Left" Foreground="Gray" FontSize="30">м.н.с. ЛИКС, ТУСУР</TextBlock>
+                <TextBlock VerticalAlignment="Center" Grid.Row="7" Grid.Column="1" TextWrapping="Wrap" TextAlignment="Left" Foreground="Gray" FontSize="30">Сальников А. С.</TextBlock>
+            </Grid>
+        </Border>
+        
+    </Grid>
+</Page>

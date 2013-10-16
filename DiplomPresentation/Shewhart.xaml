@@ -1,0 +1,52 @@
+﻿<Page x:Class="DiplomPresentation.Shewhart"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="800"
+	Title="Page3" >
+    <Grid>
+        <Border Name="Border" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
+                                Background="LightYellow" BorderBrush="Black" CornerRadius="25" Margin="5,5,5,5" Padding="0,5,0,0">
+        </Border>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock FontSize="56" Margin="30" Foreground="Gray" Grid.ColumnSpan="2">Карта Шухарта</TextBlock>
+
+            <WindowsFormsHost Grid.Row="1" Grid.Column="0" Name="graphicsHost" Background="Gray" Width="600" Height="500" Margin="60,0,30,0"/>
+
+            <Grid Grid.Row="1" Grid.Column="1" Margin="90, 0, 30, 0" VerticalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Margin="0, 5, 0, 5" FontSize="24" TextWrapping="Wrap" >1. Отображение верхней и нижней контрольных границ</TextBlock>
+                <TextBlock Margin="0, 5, 0, 5" FontSize="24" Grid.Row="1" TextWrapping="Wrap">2. Отображение спецификации</TextBlock>
+                <TextBlock Margin="0, 5, 0, 5" FontSize="24" Grid.Row="2" TextWrapping="Wrap">3. Атоматическое отслеживание трендов</TextBlock>
+                
+            </Grid>
+            <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,30,0,30">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="70" />
+                    <ColumnDefinition  />
+                </Grid.ColumnDefinitions>
+
+                <Ellipse Width="10" Height="10" Fill="Orange" Grid.Row="0" Margin="45, 0, 15,0"/>
+                <TextBlock Grid.Column="1" Grid.Row="0" TextWrapping="Wrap" FontSize="24" TextAlignment="Justify" VerticalAlignment="Center" Margin="30,10,30,10"> возможно добавление маркеров и визуальные настройки</TextBlock>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

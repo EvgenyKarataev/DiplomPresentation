@@ -1,0 +1,35 @@
+﻿<Application x:Class="DiplomPresentation.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             xmlns:local="clr-namespace:DiplomPresentation" StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        
+      
+        
+         <ControlTemplate x:Key="ď" TargetType="{x:Type NavigationWindow}">
+            <Grid Background="#FFF">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="30"/>
+                </Grid.RowDefinitions>
+
+                <AdornerDecorator Grid.Row="0">
+                    <ContentPresenter Name="PART_NavWinCP" ClipToBounds="true"/>
+                </AdornerDecorator>
+
+                <StackPanel Grid.Row="1" Orientation="Horizontal">
+                    
+                    <local:ApplicationToolbar  x:Name="toolBar" HorizontalAlignment="Right"/>
+                </StackPanel>
+            </Grid>
+        </ControlTemplate>
+
+        <Style x:Key="{x:Type NavigationWindow}" TargetType="{x:Type NavigationWindow}">
+            <Setter Property="Control.Foreground" Value="{DynamicResource {x:Static SystemColors.WindowTextBrushKey}}" />
+            <Setter Property="Control.Background" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" />
+            <Setter Property="Control.Template" Value="{StaticResource ď}" />
+        </Style>
+        
+        
+    </Application.Resources>
+</Application>

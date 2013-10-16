@@ -1,0 +1,62 @@
+﻿<Page x:Class="DiplomPresentation.Page2"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="800" Loaded="Page_Loaded"
+	Title="Page2">
+
+    <Grid>
+        <Border Name="Border" BorderThickness="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
+                                Background="LightYellow" BorderBrush="Black" CornerRadius="25" Margin="5,5,5,5" Padding="0,5,0,0">
+            
+        </Border>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            
+            <TextBlock FontSize="56" Margin="30" Foreground="Gray" Grid.ColumnSpan="2">Подложка</TextBlock>
+            
+            <WindowsFormsHost Grid.Row="1" Name="graphicsHost" Background="Gray" Width="600" Height="500" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="60,0,0,0"/>
+            <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical" VerticalAlignment="Center"  Width="Auto" Height="Auto" 
+                    Margin="90,0,60,0">
+            <WindowsFormsHost  Name="filterPageHost" Background="Gray" Width="400" Height="250" />
+                <Button Name="ApplyFilter" Width="50" Click="ApplyFilter_Click" Margin="0,5,0,10" HorizontalAlignment="Right">Apply</Button>
+                <GroupBox Name="Measurements" Header="Характеристики на графике" Margin="0,10,0,10" Background="Azure">
+                    <StackPanel Name="RadioButtons"  Orientation="Vertical" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Width="Auto" Height="Auto">
+                        <RadioButton Name="FtRadioButton" Checked="FtRadioButton_Checked" IsChecked="true" Margin="0,5,0,5">Ft</RadioButton>
+                        <RadioButton Name="S21RadioButton" Checked="S21RadioButton_Checked" Margin="0,5,0,5">Db(|S[2,1]|)</RadioButton>
+                    </StackPanel>
+                </GroupBox>
+
+                <GroupBox Header="Интегральный график" Height="Auto" Name="groupBox1" Width="Auto" Margin="0,10,0,10" Background="Azure">
+                    <StackPanel>
+                        <Button Name="SplitTraces"  Width="200" Click="SplitTraces_Click" Margin="0,5,0,5">Разбить на несколько графиков</Button>
+                        <Button Name="JoinTraces"  Width="200" Click="JoinTraces_Click" Visibility="Collapsed" Margin="0,5,0,5">Объедиить в один график</Button>
+                    </StackPanel>
+                </GroupBox>
+            </StackPanel>
+
+            <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,30,0,30">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="70" />
+                    <ColumnDefinition  />
+                </Grid.ColumnDefinitions>
+
+                <Ellipse Width="10" Height="10" Fill="Orange" Grid.Row="0" Margin="45, 0, 15,0"/>
+                <TextBlock Grid.Column="1" Grid.Row="0" TextWrapping="Wrap" FontSize="24" TextAlignment="Justify" VerticalAlignment="Center" Margin="30,10,30,10"> возможно добавление маркеров и визуальные настройки</TextBlock>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>
+
+    
